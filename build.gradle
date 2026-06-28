@@ -3,7 +3,7 @@ plugins {
 }
 
 group = "betterpolyai"
-version = "v0.1.0"
+version = "v0.1.2"
 
 java {
     sourceCompatibility = JavaVersion.VERSION_1_8
