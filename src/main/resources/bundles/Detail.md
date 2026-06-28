@@ -11,8 +11,8 @@
 
 - 设置分类标题 `settings.betterpolyai`
 - 快捷键名称 `keybind.bpa-toggle.name`
-- 自动建造、建造间隔、更新检查、弹窗提示等设置项说明
-- 功能启停提示 `bpa.toast.enabled` 与 `bpa.toast.disabled`
+- 自动建造、X 端互斥、更新检查、弹窗提示等设置项说明
+- 功能启停、X 端避让、手动接管暂停/恢复等短提示
 
 ## 实现方式
 
