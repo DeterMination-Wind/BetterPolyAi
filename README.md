@@ -1,4 +1,10 @@
 # BetterPolyAi
+<h1 align="center">
+  <a href="https://github.com/DeterMination-Wind/BetterPolyAi/releases/latest"><img src="https://img.shields.io/github/v/release/DeterMination-Wind/BetterPolyAi?display_name=release&label=Latest%20Release&color=green"></a>
+  <a href="https://github.com/DeterMination-Wind/BetterPolyAi/releases"><img src="https://img.shields.io/github/downloads/DeterMination-Wind/BetterPolyAi/total?label=Downloads&color=blue"></a>
+  <a href="LICENSE"><img src="https://img.shields.io/github/license/DeterMination-Wind/BetterPolyAi?label=License"></a>
+  <a href="https://github.com/DeterMination-Wind/BetterPolyAi"><img src="https://img.shields.io/github/stars/DeterMination-Wind/BetterPolyAi?style=flat&label=Star%20this%20mod!&color=yellow"></a>
+</h1>
 
 一个从 **MindustryX（X端）** 抽离出来的客户端模组，专注于 Poly 建造辅助。
 
