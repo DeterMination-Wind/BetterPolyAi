@@ -16,12 +16,13 @@ repositories {
 }
 
 def mindustryVersion = (findProperty("mindustryVersion") ?: "v154.2").toString()
+def arcRedirectVersion = (findProperty("arcVersion") ?: "v155.4").toString()
 
 configurations.configureEach {
     resolutionStrategy.eachDependency { details ->
-        if (details.requested.group == "com.github.Anuken.Arc" && details.requested.version == "ec5df18e54") {
-            details.useVersion(mindustryVersion)
-            details.because("Use JitPack Arc tag artifacts for stable dependency resolution")
+        if (details.requested.group == "com.github.Anuken.Arc" && !details.requested.version.startsWith("v")) {
+            details.useVersion(arcRedirectVersion)
+            details.because("Use published Arc tag artifacts for stable CI dependency resolution")
         }
     }
 }
