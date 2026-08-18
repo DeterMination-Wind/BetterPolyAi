@@ -1,28 +1,35 @@
 # BetterPolyAi
-<h1 align="center">
-  <a href="https://github.com/DeterMination-Wind/BetterPolyAi/releases/latest"><img src="https://img.shields.io/github/v/release/DeterMination-Wind/BetterPolyAi?display_name=release&label=Latest%20Release&color=green"></a>
-  <a href="https://github.com/DeterMination-Wind/BetterPolyAi/releases"><img src="https://img.shields.io/github/downloads/DeterMination-Wind/BetterPolyAi/total?label=Downloads&color=blue"></a>
-  <a href="LICENSE"><img src="https://img.shields.io/github/license/DeterMination-Wind/BetterPolyAi?label=License"></a>
-  <a href="https://github.com/DeterMination-Wind/BetterPolyAi"><img src="https://img.shields.io/github/stars/DeterMination-Wind/BetterPolyAi?style=flat&label=Star%20this%20mod!&color=yellow"></a>
-</h1>
 
-一个从 **MindustryX（X端）** 抽离出来的客户端模组，专注于 Poly 建造辅助。
+> 让 Poly 在需要时帮你补建设，同时保持玩家对单位的控制。
 
-## 功能
-- 提供 Poly 建造辅助开关（支持键位绑定，按一下切换开/关）。
-- 仅响应玩家自己的建造规划。
-- 不会去重建或辅助建造其他玩家的建造规划。
-- 与 **MindustryX（X端）** BuilderAI 互斥：检测到 X 端选中 BuilderAI 时自动让出单位控制（可在设置中关闭）。
-- 在游戏设置 → Better PolyAI 分类中可调整：启用开关、与 X 端互斥、更新检查等。
+BetterPolyAi 是从 MindustryX BuilderAI 中抽出的客户端建造辅助模组。它只响应玩家自己的建造规划，不会接管其他玩家的规划；当 MindustryX 正在使用 BuilderAI 时，也可以主动让出单位控制。
+
+它适合希望减少重复补建、又不想把单位完全交给自动 AI 的玩家。通过一个开关和一个快捷键即可控制是否介入。
 
 ## 安装
-- 从 Releases 下载以下任意产物：
-  - `betterPolyAi-<version>.zip`
-  - `betterPolyAi-<version>.jar`
-  - `betterPolyAi-<version>-android.jar`
-- 放入 Mindustry 的 `mods` 目录并重启游戏。
+
+从 Releases 下载 betterPolyAi 的模组包，放入 Mindustry 的 mods 目录并重启游戏。
 
 ## 构建
-```bash
+
+~~~powershell
 gradle deploy
-```
+~~~
+
+## English
+
+> Let Poly help with your construction while keeping you in control.
+
+BetterPolyAi is a client-side build-assist mod extracted from MindustryX BuilderAI. It reacts only to your own build plans, does not take over other players' plans, and can yield control when MindustryX is using BuilderAI.
+
+It is for players who want less repetitive construction without handing the unit completely to an automated AI. A toggle and keybind control when the assistance is active.
+
+## Install
+
+Download the betterPolyAi package from Releases, put it in Mindustry's mods directory, and restart the game.
+
+## Build
+
+~~~powershell
+gradle deploy
+~~~

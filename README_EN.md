@@ -1,22 +1,17 @@
 # BetterPolyAi
 
-A standalone client-side mod extracted from **MindustryX**, focused on Poly build assist.
+> Let Poly help with your construction while keeping you in control.
 
-## Features
-- Adds a toggleable Poly build-assist mode with a keybind.
-- Only reacts to your own build plans.
-- Does not rebuild or assist plans created by other players.
-- Mutually exclusive with MindustryX BuilderAI: yields unit control when X has BuilderAI selected (can be disabled in settings).
-- In-game settings (Settings → Better PolyAI): enable toggle, yield to MindustryX, update check, etc.
+BetterPolyAi is a client-side build-assist mod extracted from MindustryX BuilderAI. It reacts only to your own build plans, does not take over other players' plans, and can yield control when MindustryX is using BuilderAI.
+
+It is for players who want less repetitive construction without handing the unit completely to an automated AI. A toggle and keybind control when the assistance is active.
 
 ## Install
-- Download one of these artifacts from Releases:
-  - `betterPolyAi-<version>.zip`
-  - `betterPolyAi-<version>.jar`
-  - `betterPolyAi-<version>-android.jar`
-- Put it into your Mindustry `mods` directory and restart the game.
+
+Download the betterPolyAi package from Releases, put it in Mindustry's mods directory, and restart the game.
 
 ## Build
-```bash
+
+~~~powershell
 gradle deploy
-```
+~~~
