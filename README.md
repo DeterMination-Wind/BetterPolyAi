@@ -33,3 +33,7 @@ Download the betterPolyAi package from Releases, put it in Mindustry's mods dire
 ~~~powershell
 gradle deploy
 ~~~
+
+## 文档
+
+分类文档（架构 / 开发 / 发布 / 测试 / 术语表）见 [docs/README.md](docs/README.md)。
