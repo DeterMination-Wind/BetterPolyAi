@@ -19,7 +19,7 @@
 | `features.MindustryXBuilderAiProbe` | 反射探测 `mindustryX.features.ui.OverlayUI` / `AuxiliaryTools#selectAI`（编译期不依赖 MindustryX）；X 端选中 BuilderAI 时返回 true |
 | `betterpolyai.GithubUpdateCheck` | 仅独立形态运行：每 6 小时查 GitHub Releases API，失败回退 raw `mod.json`；弹窗或 toast 提示，支持忽略某版本 |
 
-数据流：`Trigger.update → PolyAiFeature.update（守卫 + 让出判定）→ PlayerPlanBuilderAI.updateUnit → updateMovement（校验规划 → 移动/建造）`。游戏暂停时不跑 `updateUnit`（保留队列与暂停状态）；让出 X 端时完全停驱动。
+数据流：`Trigger.update → PolyAiFeature.update（守卫 + 让出判定）→ PlayerPlanBuilderAI.updateUnit → updateMovement（校验规划 → 移动/建造）`。游戏暂停时不跑 `updateUnit`（保留队列与暂停状态），并把玩家单位钉在暂停瞬间的位置，避免外部驱动（如 MindustryX 悬浮工具栏 AI）在暂停时继续调用 `updateUnit`/`wobble` 造成单位漂移；让出 X 端时完全停驱动。
 
 ## 设置系统
 
