@@ -16,7 +16,7 @@
 | --- | --- |
 | `PolyAiFeature` | 总开关、设置读写（`bpa-enabled`、`bpa-mutex-with-x-polyai`，每 0.25s 刷新）、快捷键切换、运行时状态机 `RuntimeState`（normal / pausedByManualMove / yieldToX）、每帧守卫（对局中、世界未生成、玩家存活、单位可建造） |
 | `features.PlayerPlanBuilderAI` | 继承 `AIController` 的建造 AI：校验当前 BuildPlan（`validPlace` / `validBreak` / ConstructBuild 匹配），无效规划直接移除；超出建造范围时 `moveTo` 靠近（上限取 `buildRange - hitSize*2` 与 `buildRadius=1500` 的较小值）；检测手动移动并暂停/恢复自主移动（恢复需静止约 12s）；地面单位 boost 判定；`fallback` 回退 PrebuildAI / FlyingAI / GroundAI |
-| `features.MindustryXBuilderAiProbe` | 反射探测 `mindustryX.features.ui.OverlayUI` / `AuxiliaryTools#selectAI`（编译期不依赖 MindustryX）；X 端选中 BuilderAI 时返回 true |
+| `features.MindustryXBuilderAiProbe` | 反射探测 `mindustryX.features.ui.OverlayUI` / `AuxiliaryTools#selectAI`（编译期不依赖 MindustryX）；类解析核心优先（先问 `Vars.class.getClassLoader()`，失败才回退自身加载器），避免命中 Neon 打包的同名副本；X 端选中 BuilderAI 时返回 true |
 | `betterpolyai.GithubUpdateCheck` | 仅独立形态运行：每 6 小时查 GitHub Releases API，失败回退 raw `mod.json`；弹窗或 toast 提示，支持忽略某版本 |
 
 数据流：`Trigger.update → PolyAiFeature.update（守卫 + 让出判定）→ PlayerPlanBuilderAI.updateUnit → updateMovement（校验规划 → 移动/建造）`。游戏暂停时不跑 `updateUnit`（保留队列与暂停状态），并把玩家单位钉在暂停瞬间的位置，避免外部驱动（如 MindustryX 悬浮工具栏 AI）在暂停时继续调用 `updateUnit`/`wobble` 造成单位漂移；让出 X 端时完全停驱动。
