@@ -1,5 +1,7 @@
 # BetterPolyAi
 
+> [NOTE] 若有反馈，请发送反馈到bugsoc@qq.com / If you have any feedback, please send it to bugsoc@qq.com
+
 > 让 Poly 在需要时帮你补建设，同时保持玩家对单位的控制。
 
 BetterPolyAi 是从 MindustryX BuilderAI 中抽出的客户端建造辅助模组。它只响应玩家自己的建造规划，不会接管其他玩家的规划；当 MindustryX 正在使用 BuilderAI 时，也可以主动让出单位控制。
